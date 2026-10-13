@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Check</title>
+</head>
+<body>
+    <label for="">Celcius</label><br>
+    <input type="text" name="cel" id="cel"><br><br>
+    <label for="">Fahrenheit</label><br>
+    <input type="text" name="fah" id="fah"><br><br>
+    <label for="">Kelvin</label><br>
+    <input type="text" name="kel" id="kel"><br><br>
+
+    <p id="para">Total</p>
+
+    <button id="total">Calculated Temperatures:</button>
+
+    <script>
+        function getTemperatureByKelvin() {
+            var kel = document.getElementById('kel').value;
+            var cel = kel - 273.15;
+            document.getElementById('cel').value = cel;
+        }
+        function getTemperatureByCelsius() {
+            var cel = document.getElementById('cel').value;
+            var fah = (cel * 9/5) + 32;
+            document.getElementById('fah').value = fah;
+        }
+        function getTemperatureByFahrenheit() {
+            var fah = document.getElementById('fah').value;
+            var cel = (fah - 32) * 5/9;
+            document.getElementById('cel').value = cel;
+        }
+        function getNum() {
+            getTemperatureByCelsius();
+            getTemperatureByFahrenheit();
+            getTemperatureByKelvin();
+        }
+        document.getElementById('total').addEventListener('click', getNum);
+    </script>
+    
+</body>
+</html>

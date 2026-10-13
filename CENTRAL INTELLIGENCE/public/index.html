@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zyber Intelligence Agency | Field Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a class="logo" href="#home"><span class="logo-mark">ZY</span><span>Zyber<br /><small>Intelligence Agency</small></span></a>
+        <ul>
+          <li><a class="active" href="#home">Briefing</a></li>
+          <li><a href="#about">Profile</a></li>
+          <li><a href="#projects">Fieldwork</a></li>
+          <li><a href="#contact">Channels</a></li>
+        </ul>
+        <span class="clearance">CLEARANCE: PUBLIC</span>
+      </nav>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content reveal">
+        <p class="eyebrow"><span></span> ITE 108 - Website Systems and Technologies // active file 026 - 027</p>
+        <h2>Website Systems<br /><span class="highlight">through Testing.</span></h2>
+        <p class="hero-copy">A field portfolio documenting experiments, systems, and the occasional idea that refuses to stay classified.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn">Review fieldwork <span>↗</span></a>
+          <a href="#about" class="text-link">Open personnel file <span>→</span></a>
+        </div>
+      </div>
+      <div class="hero-aside reveal">
+        <div class="radar"><span class="radar-sweep"></span><span class="radar-dot dot-one"></span><span class="radar-dot dot-two"></span></div>
+        <p class="aside-label">FIELD STATUS</p>
+        <p class="aside-value">SYSTEMS NOMINAL</p>
+        <div class="status-list">
+          <p><span>DOCUMENTS</span><b>03 ACTIVE</b></p>
+          <p><span>ACCESS</span><b>PUBLIC</b></p>
+          <p><span>READINESS</span><b>84%</b></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="section-heading"><p class="eyebrow"><span></span> 01 // personnel file</p><h2>Subject profile</h2></div>
+      <div class="about-grid">
+        <p class="statement">A curious developer with a gamer&#39;s instinct for systems, patterns, and hidden routes.</p>
+        <div class="profile-copy"><p>I build and explore digital ideas with a practical streak and a little mischief. My work moves between structured experiments and playful problem-solving.</p><p class="muted">Current focus: learning in public, making useful things, and keeping an AI companion on retainer.</p></div>
+      </div>
+      <div class="metadata"><span>OPERATIVE</span><strong>AZWYN N. DE LA CRUZ - OVERWATCH</strong><span>ALIAS</span><strong>AZY / ZY</strong><span>BASE</span><strong>St. Paul University Philippines</strong><span>COURSE &amp; YEAR</span><strong>BSIT 2</strong><span>STATUS</span><strong class="orange">ACTIVE / OBSERVING</strong></div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-heading"><p class="eyebrow"><span></span> 01 // case archive</p><h2>Fieldwork Preliminaries Archive</h2><p class="section-note">Selected activities from the lab. Open a file to inspect the evidence.</p></div>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="card-top"><span>CASE 001</span><span class="status">OPEN</span></div><h3>Schedule analysis</h3>
+          <p>Mapping time, structure, and the clean geometry of a basic square.</p><a href="schedule.html">Open case file <span>↗</span></a>
+        </div>
+        <div class="project-card">
+          <div class="card-top"><span>CASE 002</span><span class="status">OPEN</span></div><h3>Institutional study</h3>
+          <p>An interface exercise examining rules, identity, and the knockoff policy.</p><a href="spup-knockoff.html">Open case file <span>↗</span></a>
+        </div>
+        <div class="project-card">
+          <div class="card-top"><span>PRELIMINARY FINAL CASE 003</span><span class="status">DISCLOSED<i class="fa fa-opencart" aria-hidden="true"></i></span></div><h3>Destination and Cultural Signal Analysis: Final Project</h3>
+          <p>A field dossier tracing destinations, cultural signals, and regional identity through a focused country study.</p><a href="italy_home.html">Open Project File <span>→</span></a>
+        </div>
+      </div>
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="card-top"><span>AUTHORIZED PERSONNEL ONLY</span></span><span class="status">RESTRICTED</span></div><h3>[REDACTED]</h3>
+          <p>This is a <span class="redacted">hidden case</span> that requires <span class="redacted">special handling</span>. The information contained within is classified and should only be accessed by authorized personnel such as the files associated within this curriculum. These are installed <span class="redacted">powerpoint lesson</span> files.</p><a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&t=1">Proceed with caution <span>↗</span></a>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="contact-copy"><p class="eyebrow"><span></span> 03 // secure channels</p><h2>Open a channel.</h2><p>For questions, collaborations, or intelligence of a less mysterious nature.</p></div>
+      <div class="contact-links"><a href="mailto:azwyndelacruz@spup.edu.ph"><small>EMAIL</small>azwyndelacruz@spup.edu.ph <span>↗</span></a><a href="https://www.facebook.com/zyberu.2807" target="_blank" rel="noopener"><small>FACEBOOK</small>Azwyn De La Cruz <span>↗</span></a><p><small>DISCORD</small><span class="discord-handle">@notpersistenthxnter</span></p></div>
+    </section>
+
+    <footer>
+      <p>© 2026 ZYBER INTELLIGENCE AGENCY</p><p>END OF BRIEFING // 026</p>
+    </footer>
+
+    <script>
+      const navigationLinks = [...document.querySelectorAll('nav li a')];
+      const sections = navigationLinks
+        .map((link) => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+
+      const setActiveLink = (sectionId) => {
+        navigationLinks.forEach((link) => {
+          const isActive = link.getAttribute('href') === `#${sectionId}`;
+          link.classList.toggle('active', isActive);
+          link.setAttribute('aria-current', isActive ? 'page' : 'false');
+        });
+      };
+
+      navigationLinks.forEach((link) => {
+        link.addEventListener('click', () => setActiveLink(link.getAttribute('href').slice(1)));
+      });
+
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          const visibleSection = entries
+            .filter((entry) => entry.isIntersecting)
+            .sort((first, second) => second.intersectionRatio - first.intersectionRatio)[0];
+
+          if (visibleSection) setActiveLink(visibleSection.target.id);
+        },
+        { rootMargin: '-20% 0px -60% 0px', threshold: [0, 0.25, 0.5, 1] }
+      );
+
+      sections.forEach((section) => sectionObserver.observe(section));
+    </script>
+  </body>
+</html>

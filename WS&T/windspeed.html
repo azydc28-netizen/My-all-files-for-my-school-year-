@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typhoon Category Identifier</title>
+</head>
+<body>
+    <label for="">Enter Wind Speed(kph)</label><br>
+    <input type="text" name="kph" id="kph"><br><br>
+
+    <p id="para">Category</p>
+
+    <button id="total">Check Category</button>
+
+    <script>
+        function getCategory() {
+            var kph = document.getElementById('kph').value;
+            var paragraph = document.getElementById('para');
+            if (kph < 61) {
+                paragraph.textContent = "Category: Tropical Depression";
+            } else if (kph >= 62 && kph <= 88) {
+                paragraph.textContent = "Category: Tropical Storm";
+            } else if (kph >= 89 && kph <= 117) {
+                paragraph.textContent = "Category: Severe Tropical Storm";
+            } else if (kph >= 118 && kph <= 220) {
+                paragraph.textContent = "Category: Typhoon";
+            } else if (kph > 220) {
+                paragraph.textContent = "Category: Super Typhoon";
+            } else {
+                paragraph.textContent = "Invalid wind speed input.";
+            }
+        }
+        document.getElementById('total').addEventListener('click', getCategory);
+    </script>
+    
+</body>
+</html>

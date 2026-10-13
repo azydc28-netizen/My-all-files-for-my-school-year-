@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box Container</title>
+    <style>
+        .home-contact-container {
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+            border: 3px solid green;
+        }
+
+        .side-containers {
+            display: flex;
+            justify-content: space-between;
+            margin: 5px;
+        }
+
+        .left-container {
+            height: 500px;
+            width: 49%;
+            border: 3px solid blue;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .right-container {
+            height: 500px;
+            width: 49%;
+            border: 3px solid red;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 5px;
+            padding: 10px;
+        }
+
+        .footer-container {
+            width: 99.2%;
+            height: 50px;
+            border: 3px solid gray;
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            margin: 5px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="home-contact-container">
+        <a href="#Home">Home</a>
+        <a href="#">Contact</a>
+    </div>
+
+    <div class="side-containers">
+        <div class="left-container">
+            <h1>Left</h1>
+        </div>
+
+        <div class="right-container">
+            <h1>Right</h1>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <p>Footer Content</p>
+    </div>
+
+</body>
+</html>
