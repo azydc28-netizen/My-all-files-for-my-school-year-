@@ -1,0 +1,448 @@
+name = input("What is your name: ")
+surname = input("What is your surname: ")
+id = input("What is your ID: ")
+
+if name and surname and id:
+    print(f"Hello {name} {surname}, your ID is {id}.")
+    hours = int(input("How many hours did you work this week: "))
+    rate = float(input("How much is your hour rate: "))
+    
+    if hours and rate:
+        print(f"You worked {hours} hours this week.")
+        print(f"Your hourly rate is ${rate}.")
+
+        total_pay = hours * rate
+        print(f"Your total pay for this week is: ${total_pay:.2f}")
+        
+    else:
+        print("Please enter valid numeric values for hours and rate.")
+
+else:
+    print("Please provide all the required information (name, surname, and ID).")
+
+No if-else:
+
+name = input("What is your name: ")
+surname = input("What is your surname: ")
+id = input("What is your ID: ")
+
+print(f"Hello {name} {surname}! Your ID is {id}")
+
+hours = int(input("How many hours did you work: "))
+rate = float(input("How much rate per hour: "))
+
+pay = hours * rate
+
+print(f"So your total hour rate will be ${pay}.")
+
+
+import java.util.Scanner;
+
+public class GradeCalculator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Get marks for 3 subjects
+        System.out.print("Enter marks for Subject 1: ");
+        double sub1 = scanner.nextDouble();
+
+        System.out.print("Enter marks for Subject 2: ");
+        double sub2 = scanner.nextDouble();
+
+        System.out.print("Enter marks for Subject 3: ");
+        double sub3 = scanner.nextDouble();
+
+        // Calculate total and average
+        double total = sub1 + sub2 + sub3;
+        double average = total / 3.0;
+
+        // Determine grade
+        char grade;
+        if (average >= 90) {
+            grade = 'A';
+        } else if (average >= 75) {
+            grade = 'B';
+        } else if (average >= 50) {
+            grade = 'C';
+        } else if (average >= 35) {
+            grade = 'S';
+        } else {
+            grade = 'F';
+        }
+
+        // Print results
+        System.out.println("\n--- Results ---");
+        System.out.println("Total Marks: " + total);
+        System.out.println("Average Percentage: " + average);
+        System.out.println("Grade: " + grade);
+
+        scanner.close();
+    }
+}
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Enter the total amount of milk produced in liters: ");
+        double totalMilk = scanner.nextDouble();
+        
+        int cartonsNeeded = (int) ((totalMilk / 3.78) + 0.5);
+        double totalCost = totalMilk * 0.38;
+        double totalProfit = cartonsNeeded * 0.27;
+        
+        System.out.println("Number of milk cartons needed: " + cartonsNeeded);
+        System.out.println("Total cost of producing milk: $" + totalCost + "0");
+        System.out.println("Total profit from producing milk: $" + totalProfit);
+        
+        scanner.close();
+    }
+}
+
+public class Main {
+    int x = 5;
+    
+    public static void main(String[] args) {
+        Main myObj1 = new Main();
+        Main myObj2 = new Main();
+        System.out.println(myObj1.x);
+        System.out.println(myObj2.x);
+    }
+}
+
+class laptop{
+    String brand, color, specs;
+
+    public laptop(String brand, String color, String specs){
+        this.brand = brand;
+        this.color = color;
+        this.specs = specs;
+    }
+    public static void main(String[] args){
+        
+        laptop Juan = new laptop("acer", "Gold", "intelcore7");
+        laptop Pedro = new laptop("lenovo", "Black", "Quadcore");
+        laptop Raul = new laptop("acer", "White", "inteli7");
+
+        System.out.println("Juan own " + Juan.brand + " " + Juan.color + " color laptop having " + Juan.specs + " specs");
+        System.out.println("Pedro own " + Pedro.brand + " " + Pedro.color + " color laptop having " + Pedro.specs + " specs");
+        System.out.println("Raul own " + Raul.brand + " " + Raul.color + " color laptop having " + Raul.specs + " specs");
+    }   
+}
+
+import java.io.*;
+
+public class Employee {
+    
+    String name;
+    int age;
+    String designation;
+    double salary;
+    
+    public Employee(String name) {
+        this.name = name;
+    }
+    
+    public void empAge(int empAge) {
+        age = empAge;
+    }
+    
+    public void empDesignation(String empDesig) {
+        designation = empDesig;
+    }
+    
+    public void empSalary(double empSalary) {
+        salary = empSalary;
+    }
+    
+    public void printEmployee() {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Designation: " + designation);
+        System.out.println("Salary: " + salary);
+    }
+
+    public static void main(String[] args) {
+        Employee emp = new Employee("Azwyn");
+        
+        emp.empAge(30);
+        emp.empDesignation("Programmer");
+        emp.empSalary(85000.50);
+        
+        emp.printEmployee();
+    }
+}
+
+import java.io.*;
+
+public class Dinosaur {
+    
+    String name;
+    String color;
+    double weight;
+    double length;
+
+
+    public Dinosaur(String name) {
+        this.name = name;
+    }
+
+    public void dinoColor(String dinoColor) {
+        color = dinoColor;
+    }
+
+    public void dinoWeight(double dinoWeight) {
+        weight = dinoWeight;
+    }
+
+    public void dinoLength(double dinoLength) {
+        length = dinoLength;
+    }
+
+    public void printDinosaur() {
+        System.out.println("Name: " + name);
+        System.out.println("Color: " + color);
+        System.out.println("Weight: " + weight);
+        System.out.println("Length: " + length);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Dinosaur trex = new Dinosaur("T-Rex");
+        trex.dinoColor("Brown");
+        trex.dinoWeight(8000.0);
+        trex.dinoLength(12.3);
+
+        Dinosaur steg = new Dinosaur("Stegosaurus");
+        steg.dinoColor("Green");
+        steg.dinoWeight(4500.0);
+        steg.dinoLength(9.0);
+
+        Dinosaur spino = new Dinosaur("Spinosaurus");
+        spino.dinoColor("Dark Green");
+        spino.dinoWeight(7000.0);
+        spino.dinoLength(15.0); 
+
+        Dinosaur trice = new Dinosaur("Triceratops");
+        trice.dinoColor("Gray"); 
+        trice.dinoWeight(6000.0);
+        trice.dinoLength(10.0); 
+
+        trex.printDinosaur();
+        steg.printDinosaur();
+        spino.printDinosaur();
+        trice.printDinosaur();
+    }
+}
+
+import java.io.*; 
+
+class Car { 
+    String brand; 
+    String model; 
+    int year; 
+
+    public Car(String brand) { 
+        this.brand = brand; 
+    } 
+
+    public void carModel(String carModel) { 
+        this.model = carModel; 
+    } 
+
+    public void carYear(int carYear) { 
+        this.year = carYear; 
+    } 
+
+    public void displayInfo() { 
+        System.out.println("Brand: " + brand + ", Model: " + model + ", Year: " + year); 
+    } 
+} 
+
+public class Main { 
+    public static void main(String[] args) { 
+        Car toy = new Car("Toyota"); 
+        toy.carModel("Corolla"); 
+        toy.carYear(2020); 
+
+        Car hon = new Car("Honda"); 
+        hon.carModel("Civic"); 
+        hon.carYear(2019); 
+
+        toy.displayInfo(); 
+        hon.displayInfo(); 
+    } 
+}
+
+public class Product {
+    String productName;
+    double price;
+    int quantity;
+
+    public Product() {
+        this.productName = "Unknown";
+        this.price = 0.0;
+        this.quantity = 0;
+    }
+
+    public Product(String productName, double price) {
+        this.productName = productName;
+        this.price = price;
+        this.quantity = 0;
+    }
+
+    public Product(String productName, double price, int quantity) {
+        this.productName = productName; 
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+    public void displayProduct() {
+        System.out.println("Product Name: " + productName);
+        System.out.println("Price: P" + price);
+        System.out.println("Quantity: " + quantity);
+    }
+
+    public static void main(String[] args) {
+        Product p1 = new Product();
+        Product p2 = new Product("Keyboard", 850.00);
+        Product p3 = new Product("Mouse", 450.00, 3);
+
+        System.out.println("---Product 1---");
+        p1.displayProduct();
+
+        System.out.println("---Product 2---");
+        p2.displayProduct();
+
+        System.out.println("---Product 3---");
+        p3.displayProduct();
+    }
+}
+
+public class Employee {
+    int employeeId;
+    String employeeName;
+    String position;
+    int salary;
+
+    public Employee() {
+        this.employeeId = 0000;
+        this.employeeName = "Unknown";
+        this.position = position;
+        this.salary = 0;
+    }
+
+    public Employee(int employeeId, String employeeName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.position = position;
+        this.salary = 0;
+    }
+
+    public Employee(int employeeId, String employeeName, String position, int salary) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName; 
+        this.position = position;
+        this.salary = salary;
+    }
+
+    public void displayEmployee() {
+        System.out.println("Employee ID: " + employeeId);
+        System.out.println("Employee Name: " + employeeName);
+        System.out.println("Position: " + position);
+        System.out.println("Salary: " + salary);
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        Employee e1 = new Employee();
+        Employee e2 = new Employee(1002, "Ana Cruz");
+        Employee e3 = new Employee(1003, "Pedro Santos", "Software Developer", 35000);
+
+        System.out.println("---Employee No.1---");
+        e1.displayEmployee();
+
+        System.out.println("---Employee No.2---");
+        e2.displayEmployee();
+
+        System.out.println("---Employee No.3---");
+        e3.displayEmployee();
+    }
+}
+
+public class BankAccount {
+    String accountNumber;
+    String accountHolder;
+    double balance;
+
+    public BankAccount() {
+        this.accountNumber = "0";
+        this.accountHolder = "Unknown";
+        this.balance = 0;
+    }
+
+    public BankAccount(String accountNumber, String accountHolder) {
+        this.accountNumber = accountNumber;
+        this.accountHolder = accountHolder;
+        this.balance = 0;
+    }
+
+    public BankAccount(String accountNumber, String accountHolder, double balance) {
+        this.accountNumber = accountNumber;
+        this.accountHolder = accountHolder;
+        this.balance = balance;
+    }
+
+    public void deposit(double amount) {
+        if (amount > 0) {
+            this.balance += amount;
+            System.out.println("Successfully Deposited: P" + amount);
+        } else {
+            System.out.println("Invalid deposit amount.");
+        }
+    }
+
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= this.balance) {
+            this.balance -= amount;
+            System.out.println("Successfully Withdrew: P" + amount);
+        } else if (amount > this.balance) {
+            System.out.println("Insufficient funds.");
+        } else {
+            System.out.println("Invalid withdrawal amount.");
+        }
+    }
+    
+    public void displayAccount() {
+        System.out.println("----- Account Details -----");
+        System.out.println("Account Number: " + this.accountNumber);
+        System.out.println("Account Holder: " + this.accountHolder);
+        System.out.println("Current Balance: P" + this.balance); 
+        System.out.println("---------------------------");
+    }
+
+    public static void main(String[] args) {
+        System.out.println("=== Creating Accounts ===");
+        BankAccount acc1 = new BankAccount();
+        BankAccount acc2 = new BankAccount("ACC-1001", "Maria Clara");
+        BankAccount acc3 = new BankAccount("ACC-1002", "Juan Dela Cruz", 10000);
+        
+        acc1.displayAccount();
+        acc2.displayAccount();
+        acc3.displayAccount();
+
+        System.out.println("\n=== Testing Deposit ===");
+        acc3.deposit(2000);
+
+        System.out.println("\n=== Testing Valid Withdrawal ===");
+        acc3.withdraw(1500);
+
+        System.out.println("\n=== Testing Invalid Withdrawal ===");
+        acc3.withdraw(20000);
+
+        System.out.println("\n=== Final Account Status ===");
+        acc3.displayAccount();
+    }
+}

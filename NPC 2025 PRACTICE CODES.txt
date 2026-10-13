@@ -1,0 +1,202 @@
+g1 = float(input("Enter grade: "))
+g2 = float(input("Enter grade: "))
+g3 = float(input("Enter grade: "))
+
+average = (g1 + g2 + g3) / 3 
+
+if average >= 75:
+    print(f"Average: {average:.2f}")
+    print(f"Result: Passed!")
+if average <= 75:
+    print(f"Average: {average:.2f}")
+    print(f"Result: Failed!")
+
+rows = 5
+for i in range(1, rows + 1):
+    for j in range(1, i + 1): 
+        print(j, end=" ")
+    print()
+
+original_string = "Codechum"
+reversed_string = "".join(reversed(original_string))
+vowels = len(original_string)
+print(reversed_string)
+print(f"Vowels: {vowels}")
+
+n = int(input("Enter number of elements (1-100): "))
+
+
+arr = []
+for i in range(n):
+    num = int(input(f"Enter element #{i+1}: "))
+    arr.append(num)
+
+
+total_sum = sum(arr)
+average = total_sum / n
+maximum = max(arr)
+minimum = min(arr)
+
+
+print("Sum:", total_sum)
+print("Average: {:.2f}".format(average))
+print("Maximum:", maximum)
+print("Minimum:", minimum)
+
+print("Temperature Converter")
+print("1. Celsius to Fahrenheit")
+print("2. Celsius to Kelvin")
+print("3. Fahrenheit to Celsius")
+print("4. Fahrenheit to Kelvin")
+print("5. Kelvin to Celsius")
+print("6. Kelvin to Fahrenheit")
+
+choice = int(input("Enter your choice (1-6): "))
+temp = float(input("Enter temperature value: "))
+
+match choice:
+
+    case 1:  
+        result = (temp * 9/5) + 32
+        print("Result:", round(result, 2), "°F")
+
+    case 2:  
+        result = temp + 273.15
+        print("Result:", round(result, 2), "K")
+
+    case 3:  
+        result = (temp - 32) * 5/9
+        print("Result:", round(result, 2), "°C")
+
+    case 4:  
+        result = ((temp - 32) * 5/9) + 273.15
+        print("Result:", round(result, 2), "K")
+
+    case 5:  
+        result = temp - 273.15
+        print("Result:", round(result, 2), "°C")
+
+    case 6:  
+        result = ((temp - 273.15) * 9/5) + 32
+        print("Result:", round(result, 2), "°F")
+
+    case _:  
+        print("Invalid choice! Please choose between 1 and 6.")
+
+matrix1 = [[1, 2, 3],
+           [4, 5, 6],
+           [7, 8, 9]]
+
+matrix2 = [[9, 8, 7],
+           [6, 5, 4],
+           [3, 2, 1]]
+
+
+result_matrix = []
+
+a = int(input("Enter integer a: "))
+b = int(input("Enter integer b: "))
+
+print("\n=== Bitwise Operation Results ===")
+
+
+print("a AND b =", a & b)
+
+
+print("a OR b  =", a | b)
+
+
+print("a XOR b =", a ^ b)
+
+
+print("NOT a    =", ~a)
+
+
+print("a << 1   =", a << 1)
+
+
+print("b >> 1   =", b >> 1)
+
+if len(matrix1) != len(matrix2) or len(matrix1[0]) != len(matrix2[0]):
+    print("Error: Matrices must have the same dimensions for addition.")
+else:
+
+    for i in range(len(matrix1)):
+        row = []
+        for j in range(len(matrix1[0])):  
+            row.append(matrix1[i][j] + matrix2[i][j])
+        result_matrix.append(row)
+
+
+    print("Addition of two matrices:")
+    for row in result_matrix:
+        print(row)
+
+num1 = float(input("Enter first number: "))
+num2 = float(input("Enter second number: "))
+op = input("Enter operator (+, -, *, /, %): ")
+
+
+if op == "+":
+    print("Result:", num1 + num2)
+
+elif op == "-":
+    print("Result:", num1 - num2)
+
+elif op == "*":
+    print("Result:", num1 * num2)
+
+elif op == "/":
+
+    if num2 == 0:
+        print("Error: Division by zero is not allowed.")
+    else:
+        print("Result:", num1 / num2)
+
+elif op == "%":
+
+    if num2 == 0:
+        print("Error: Modulo by zero is not allowed.")
+    else:
+        print("Result:", num1 % num2)
+
+else:
+    print("Invalid operator!")
+
+text = input("Enter a string (max 200 characters): ")
+
+uppercase = 0
+lowercase = 0
+digits = 0
+spaces = 0
+
+i = 0
+length = len(text)
+
+while i < length:
+
+    ch = text[i]
+
+    if ch == '.':
+        break
+
+    if not (ch.isupper() or ch.islower() or ch.isdigit() or ch.isspace()):
+        i += 1
+        continue
+
+    if ch.isupper():
+        uppercase += 1
+    elif ch.islower():
+        lowercase += 1
+    elif ch.isdigit():
+        digits += 1
+    elif ch.isspace():
+        spaces += 1
+
+    i += 1
+
+
+print(f"Uppercase letters:", {uppercase})
+print(f"Lowercase letters:", {lowercase})
+print(f"Digits:", {digits})
+print(f"Spaces:", {spaces})
